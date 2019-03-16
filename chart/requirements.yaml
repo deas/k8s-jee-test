@@ -1,0 +1,9 @@
+dependencies:
+- name: tomcat
+  repository: file://tomcat
+  version: 0.0.1
+  alias: tomcat
+- name: nginx-ingress
+  version: 0.28.2
+  repository: https://kubernetes-charts.storage.googleapis.com
+  alias: nginx-ingress
