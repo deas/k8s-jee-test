@@ -34,19 +34,17 @@ ingress:
   #      - chart-example.local
 
 readinessProbe:
-  path: "/k8s-jee-test/health.jsp"
+  path: "/k8s-jee-test/"
   initialDelaySeconds: 5
   periodSeconds: 30
   failureThreshold: 6
 livenessProbe:
-  path: "/k8s-jee-test/health.jsp"
+  path: "/k8s-jee-test/"
   initialDelaySeconds: 5
   periodSeconds: 30
 
-env:
-- name: TEST_RESPONSE_TIME
-  value: 0
-#- name: TEST_STARTUP_TIME
+extraEnv: {}
+#- name: TEST_APP_PARAM
 #  value: 0
 
 resources: {}

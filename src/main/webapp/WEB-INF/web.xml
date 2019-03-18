@@ -5,7 +5,7 @@
   <display-name>K8S Test Web Application</display-name>
   <filter>
     <filter-name>timing</filter-name>
-    <filter-class>de.contentreich.TimingFilter</filter-class>
+    <filter-class>de.contentreich.ApplicationFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>timing</filter-name>

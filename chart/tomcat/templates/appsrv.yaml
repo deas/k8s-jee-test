@@ -59,7 +59,13 @@ spec:
           resources:
 {{ toYaml .Values.resources | indent 12 }}
           env:
-{{ toYaml .Values.env | indent 12 }}
+            - name: TEST_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+{{- if .Values.extraEnv }}
+{{ toYaml .Values.extraEnv | indent 12 }}
+{{- end }}
     {{- if .Values.image.pullSecrets }}
       imagePullSecrets:
 {{ toYaml .Values.image.pullSecrets | indent 8 }}

@@ -20,7 +20,7 @@ nginx-ingress:
       
 
 tomcat:
-  replicaCount: 1
+  replicaCount: 5
   ingress:
     enabled: true
     annotations:
@@ -30,7 +30,7 @@ tomcat:
     path: /k8s-jee-test
     #hosts:
     #- "localhost"
-  env:
+  extraEnv:
   - name: TEST_APP_PARAM
     value: "dunno"
   service:

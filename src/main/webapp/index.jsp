@@ -1,6 +1,7 @@
+<%@ page import="de.contentreich.ApplicationFilter" %>
 <%@ page session = "false" %>
 <html>
 <body>
-<h2>Hello World! sleep =  <%= request.getParameter("sleep")%>, healthy = <%= application.getAttribute("healthy") %></h2>
+<h2><%= request.getAttribute(ApplicationFilter.ATTR_MESSAGE) %></h2>
 </body>
 </html>
